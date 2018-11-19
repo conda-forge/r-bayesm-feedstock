@@ -15,7 +15,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1000
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -68,8 +68,7 @@ about:
     and Marketing by Rossi, Allenby and McCulloch (Wiley 2005) and Bayesian Non- and
     Semi-Parametric Methods and Applications (Princeton U Press 2014).'
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
