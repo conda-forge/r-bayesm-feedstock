@@ -1,4 +1,4 @@
-{% set version = "3.1-4" %}
+{% set version = "3.1-5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bayesm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bayesm/bayesm_{{ version }}.tar.gz
-  sha256: 061b216c62bc72eab8d646ad4075f2f78823f9913344a781fa53ea7cf4a48f94
+  sha256: f223074ca41ede293b48350eac77a565e034f0f8cf3dd72d0e1d126cc58047a2
 
 build:
-  merge_build_host: True  # [win]
-  number: 3
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -50,25 +50,14 @@ test:
 about:
   home: http://www.perossi.org/home/bsm-1
   license: GPL-2
-  summary: 'Covers many important models used in marketing and micro-econometrics applications.  The
-    package includes: Bayes Regression (univariate or multivariate dep var), Bayes Seemingly
-    Unrelated Regression (SUR), Binary and Ordinal Probit, Multinomial Logit (MNL) and
-    Multinomial Probit (MNP), Multivariate Probit, Negative Binomial (Poisson) Regression,
-    Multivariate Mixtures of Normals (including clustering), Dirichlet Process Prior
-    Density Estimation with normal base, Hierarchical Linear Models with normal prior
-    and covariates, Hierarchical Linear Models with a mixture of normals prior and covariates,
-    Hierarchical Multinomial Logits with a mixture of normals prior and covariates,
-    Hierarchical Multinomial Logits with a Dirichlet Process prior and covariates, Hierarchical
-    Negative Binomial Regression Models, Bayesian analysis of choice-based conjoint
-    data, Bayesian treatment of linear instrumental variables models, Analysis of Multivariate
-    Ordinal survey data with scale usage heterogeneity (as in Rossi et al, JASA (01)),
-    Bayesian Analysis of Aggregate Random Coefficient Logit Models as in BLP (see Jiang,
-    Manchanda, Rossi 2009) For further reference, consult our book, Bayesian Statistics
-    and Marketing by Rossi, Allenby and McCulloch (Wiley 2005) and Bayesian Non- and
+  summary: 'Covers many important models used in marketing and micro-econometrics applications.  The package includes: Bayes Regression (univariate or multivariate dep var), Bayes Seemingly Unrelated Regression (SUR), Binary and Ordinal Probit, Multinomial Logit (MNL) and Multinomial Probit (MNP), Multivariate Probit, Negative
+    Binomial (Poisson) Regression, Multivariate Mixtures of Normals (including clustering), Dirichlet Process Prior Density Estimation with normal base, Hierarchical Linear Models with normal prior and covariates, Hierarchical Linear Models with a mixture of normals prior and covariates, Hierarchical Multinomial Logits with
+    a mixture of normals prior and covariates, Hierarchical Multinomial Logits with a Dirichlet Process prior and covariates, Hierarchical Negative Binomial Regression Models, Bayesian analysis of choice-based conjoint data, Bayesian treatment of linear instrumental variables models, Analysis of Multivariate Ordinal survey
+    data with scale usage heterogeneity (as in Rossi et al, JASA (01)), Bayesian Analysis of Aggregate Random Coefficient Logit Models as in BLP (see Jiang, Manchanda, Rossi 2009) For further reference, consult our book, Bayesian Statistics and Marketing by Rossi, Allenby and McCulloch (Wiley 2005) and Bayesian Non- and
     Semi-Parametric Methods and Applications (Princeton U Press 2014).'
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
