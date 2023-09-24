@@ -1,4 +1,4 @@
-{% set version = "3.1-5" %}
+{% set version = "3.1-6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bayesm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bayesm/bayesm_{{ version }}.tar.gz
-  sha256: f223074ca41ede293b48350eac77a565e034f0f8cf3dd72d0e1d126cc58047a2
+  sha256: 17d72b9cdc090845f98e7a04640380d0baef8bc23d1487c8f64dc192fdb93cb5
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
