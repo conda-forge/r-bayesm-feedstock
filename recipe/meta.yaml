@@ -1,4 +1,4 @@
-{% set version = "3.1-6" %}
+{% set version = "3.1-7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bayesm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bayesm/bayesm_{{ version }}.tar.gz
-  sha256: 17d72b9cdc090845f98e7a04640380d0baef8bc23d1487c8f64dc192fdb93cb5
+  sha256: d207debbb7c6a4e37ed2b45336df156e454f3a214d90d24e1bca8a2ba8704999
 
 build:
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
